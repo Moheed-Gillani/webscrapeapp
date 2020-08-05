@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<h2 class=" bg-success text-light">{{ content | title }}</h2>
+<div class="row mt-1">
+{% for post in final_posting %}
+<div class="col-4 col-md-4 col-12">
+  <div class="card" style="width: 18rem; height:30rem;">
+    <img class="card-img-top" src="{{ post.3 }}" alt="Card image cap" style="width: 250px; height:300px;">
+    <div class="card-body">
+      <h5 class="card-title">{{ post.0 }}</h5>
+      <!-- <p class="card-text">{{ post.2 }}</p> -->
+      <a href="{{ post.1 }}" class="btn btn-success">Get-job-offer</a>
+    </div>
+  </div>
+  </div>
+{% endfor %}   
+</div>
+{% endblock %}
